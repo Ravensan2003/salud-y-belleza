@@ -1,0 +1,232 @@
+.menu {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  display: inline-block;
+}
+.logo-glam{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.logog7.png {
+  width: 50px;
+  height: auto;
+}
+
+.logo-menu {
+  width: 50px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.logo-menu:hover {
+  filter: grayscale(0%);
+}
+
+.texto-menu {
+  color: white;
+  text-decoration: none;
+  font-family: serif;
+  font-size: 18px;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.texto-menu:hover {
+  background-color: white;
+  color: black;
+}
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.producto {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.producto p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.producto button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: #444;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer .redes,
+footer .pagos {
+  margin-top: 10px;
+}
+
+
+footer .redes img,
+footer .pagos img {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* blanco sobre fondo oscuro */
+}
+
+footer .redes img:hover,
+footer .pagos img:hover {
+  transform: scale(1.2);
+}
+
+/* Imagen promocional fija (tipo banner) */
+.banner-promocional {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+#formulario-compra.oculto {
+  display: none;
+}
+
+#formulario-compra {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #000;
+}
+
+#formulario-compra form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario-compra label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#formulario-compra input,
+#formulario-compra select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formulario-compra button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #eee;
+  position: relative;
+}
+
+.formulario-compra {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.formulario-compra input,
+.formulario-compra select {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+.formulario-compra button {
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.oculto {
+  display: none;
+}

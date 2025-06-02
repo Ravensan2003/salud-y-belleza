@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natura</title>
+    <link rel="stylesheet" href="natura.css">
+    <link rel="icon" href="img/logog7.png" type="image/png">
+    <script src="pedido.js"></script>
+</head>
+<body>
+     <header>
+    <div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="menu.html"><img src="img/logog4.png" alt="Inicio" class="logo-menu"></a></li>
+        <li><a href="natura.html"><img src="img/Logo-Natura-PNG-y-Vector-SVG-y-ESP.png" alt="Natura" class="logo-menu"></a></li>
+        <li><a href="avon.html"><img src="img/Avon.png" alt="Avon" class="logo-menu"></a></li>
+        <li><a href="shelon.html"><img src="img/shelon nabel.png" alt="Sheló Nabel" class="logo-menu"></a></li>
+        <li><a href="consultores.html"><img src="img/consultores.png" alt="Consultores" class="logo-menu"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="presentacion">
+    <h1>Productos Natura</h1>
+    <p>Explora nuestra línea de productos naturales para el cuidado personal.</p>
+  </section>
+
+ <img src="img/promo-natura.png" alt="Promoción de productos" class="banner-promocional">
+
+  <section class="catalogo">
+
+<!-- Producto 1 -->
+    <div class="producto">
+      <img src="imagenes/desorotante.PNG" alt="Desodorante">
+      <h3>desodorante antitranspirante</h3>
+      <p>De $135 MXN a $108 MXN</p>
+       <button onclick="mostrarFormularioCompra('form1', 'Desodorante Antitranspirante')">
+  Comprar
+</button>
+
+  <section id="form1" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form1')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+    <!-- Producto 2 -->
+    <div class="producto">
+      <img src="imagenes/perfume.PNG" alt="Perfume">
+      <h3>Frescor eau de toilette pitanga preta</h3>
+      <p>De $559 MXN a $447.20 MXN</p>
+       <button onclick="mostrarFormularioCompra('form2', 'Perfume Frescor')">
+  Comprar
+</button>
+
+  <section id="form2" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form2')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+   <!-- Producto 3 -->
+    <div class="producto">
+      <img src="imagenes/perfume kaiak.PNG" alt="Perfume kaiak">
+      <h3>Perfume kaiak</h3>
+      <p>De $729 MXN a $583.20 MXN</p>
+       <button onclick="mostrarFormularioCompra('form3', 'Perfume kaiak')">
+  Comprar
+</button>
+
+  <section id="form3" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form3')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+     <!-- Producto 4 -->
+    <div class="producto">
+      <img src="imagenes/jabon exfoliante.PNG.png" alt="Jabon exfoliante">
+      <h3>Jabon exfoliante</h3>
+      <p>De $299 MXN a $239.20 MXN</p>
+       <button onclick="mostrarFormularioCompra('form4', 'Jabon exfoliante')">
+  Comprar
+</button>
+
+  <section id="form4" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form4')">Enviar por WhatsApp</button>
+  </form>
+   </section>
+</div>
+
+     <!-- Producto 5 -->
+    <div class="producto">
+      <img src="imagenes/perfume humor.PNG" alt="Perfume humor">
+      <h3>Humor Meu Primeiro eau de toilette</h3>
+      <p>De $719 MXN a $575.20 MXN</p>
+       <button onclick="mostrarFormularioCompra('form5', 'Humor Meu Primeiro eau de toilette')">
+  Comprar
+</button>
+
+  <section id="form5" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form5')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+     <!-- Producto 6 -->
+    <div class="producto">
+      <img src="imagenes/perfume humor liberta1.PNG" alt="Perfume Humor">
+      <h3>Perfume Humor</h3>
+      <p>De $719 MXN a $575.20 MXN</p>
+       <button onclick="mostrarFormularioCompra('form6', 'Perfume Humor Liberta')">
+  Comprar
+</button>
+
+  <section id="form6" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form6')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+<!-- Producto 7 -->
+    <div class="producto">
+      <img src="imagenes/perfume humor liberta.PNG" alt="Perfume Humor body">
+      <h3>Perfume Humor Body splash</h3>
+      <p>De $361 MXN a $288.80 MXN</p>
+       <button onclick="mostrarFormularioCompra('form7', 'Desodorante Antitranspirante')">
+  Comprar
+</button>
+
+  <section id="form7" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form7')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+<!-- Producto 8 -->
+    <div class="producto">
+      <img src="imagenes/promo 2x1.png" alt="promo 2x1">
+      <h3>Perfume Humor / Perfume Humor Body splash</h3>
+      <p>De 1080 MXN a $756 MXN</p>
+       <button onclick="mostrarFormularioCompra('form8', 'Desodorante Antitranspirante')">
+  Comprar
+</button>
+
+  <section id="form8" class="oculto">
+  <h2>Formulario de Compra</h2>
+  <form>
+    <label>Producto:</label>
+    <input type="text" id="producto" name="producto" readonly>
+
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Domicilio:</label>
+    <input type="text" name="domicilio" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required>
+
+    <label>Forma de pago:</label>
+    <select name="pago" required>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+      <option value="Tarjeta">Tarjeta</option>
+    </select>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form8')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+</section>
+
+ <footer>
+    <p>&copy; 2025 Nanci Glam Nature. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61562969484681"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/527711253543"><img src="img/whatsapp1.png" alt="WhatsApp"></a>
+    </div>
+    <div class="pagos">
+     <a href="pago.html"><img src="img/bbva.png" alt="BBVA"></a>
+     <a href="pago.html"><img src="img/mercadopago.png" alt="Mercado pago"></a>
+     <a href="pago.html"><img src="img/paypal1.png" alt="Paypal"></a>
+    </div>
+  </footer>
+  
+<script>
+  function mostrarFormularioCompra(idFormulario, nombreProducto) {
+    // Oculta todos los formularios primero
+    const formularios = document.querySelectorAll('.formulario-compra');
+    formularios.forEach(f => f.classList.add('oculto'));
+
+    // Muestra el formulario correspondiente
+    const formulario = document.getElementById(idFormulario);
+    formulario.classList.remove('oculto');
+
+    // Rellena el campo de producto
+    formulario.querySelector('input[name="producto"]').value = nombreProducto;
+  }
+
+  function enviarPedidoWhatsApp(idFormulario) {
+    const formulario = document.getElementById(idFormulario);
+    const producto = formulario.querySelector('input[name="producto"]').value;
+    const nombre = formulario.querySelector('input[placeholder="Nombre completo"]').value;
+    const domicilio = formulario.querySelector('input[placeholder="Domicilio"]').value;
+    const telefono = formulario.querySelector('input[placeholder="Teléfono"]').value;
+    const pago = formulario.querySelector('select').value;
+
+    if (!nombre || !domicilio || !telefono || !pago) {
+      alert('Por favor completa todos los campos');
+      return;
+    }
+
+    const numero = "5211234567890"; // <-- Cambia este número por el tuyo con lada internacional
+    const mensaje = `Hola, quiero realizar un pedido:\n\n🛍 Producto: ${producto}\n👤 Nombre: ${nombre}\n🏠 Domicilio: ${domicilio}\n📞 Teléfono: ${telefono}\n💳 Forma de pago: ${pago}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>

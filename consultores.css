@@ -1,0 +1,203 @@
+.menu {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.logo-glam{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.logog7.png {
+  width: 50px;
+  height: auto;
+}
+
+.logo-menu {
+  width: 50px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.logo-menu:hover {
+  filter: grayscale(0%);
+}
+
+.texto-menu {
+  color: white;
+  text-decoration: none;
+  font-family: serif;
+  font-size: 18px;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.texto-menu:hover {
+  background-color: white;
+  color: black;
+}
+
+.presentacion-consultor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 60px;
+}
+
+.presentacion-consultor .imagen-consultor {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.presentacion-consultor .imagen-consultor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.presentacion-consultor .descripcion-consultor {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.presentacion-consultor .descripcion-consultor h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.presentacion-consultor .descripcion-consultor p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Sección de Registro */
+.registro {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+}
+
+.registro h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="file"] {
+  background-color: #fafafa;
+  border: 1px dashed #aaa;
+  padding: 8px;
+}
+
+form button {
+  margin-top: 25px;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer .redes,
+footer .pagos {
+  margin-top: 10px;
+}
+
+
+footer .redes img,
+footer .pagos img {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* blanco sobre fondo oscuro */
+}
+
+footer .redes img:hover,
+footer .pagos img:hover {
+  transform: scale(1.2);
+}
+
+.titulo-consultor {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.parrafo-consultor {
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}

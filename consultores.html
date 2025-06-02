@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultores</title>
+    <link rel="stylesheet" href="consultores.css">
+    <link rel="icon" href="img/logog7.png" type="image/png">
+    <script src="consultor.js"></script>
+</head>
+<body>
+     <header>
+    <div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="menu.html"><img src="img/logog4.png" alt="Inicio" class="logo-menu"></a></li>
+        <li><a href="natura.html"><img src="img/Logo-Natura-PNG-y-Vector-SVG-y-ESP.png" alt="Natura" class="logo-menu"></a></li>
+        <li><a href="avon.html"><img src="img/Avon.png" alt="Avon" class="logo-menu"></a></li>
+        <li><a href="shelon.html"><img src="img/shelon nabel.png" alt="Sheló Nabel" class="logo-menu"></a></li>
+        <li><a href="consultores.html"><img src="img/consultores.png" alt="Consultores" class="logo-menu"></a></li>
+      </ul>
+    </nav>
+  </header>
+    <section class="presentacion-consultor">
+    <div class="consultor-info">
+      <img src="img/1912.i402.014_Beauty salon flat composition.jpg" height="500px" alt="Consultor ejemplo">
+      <div>
+        <h2 class="titulo-consultor">¡Únete como consultor!</h2>
+        <p class="parrafo-consultor">Forma parte de nuestro equipo y genera ingresos vendiendo productos de belleza y gosa de recompensas por desempeño.</p>
+      </div>
+    </div>
+  </section>
+  <section class="contacto-consultor">
+    <h3>¿Dudas? Contactame: </h3>
+    <p><strong>Nombre:</strong> Nanci Coraza</p>
+    <p><strong>Email:</strong> nancicoraza26@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +52 771 125 35 43</p>
+  </section>
+  <section class="registro">
+  <h2>Regístrate como Consultor</h2>
+  <form onsubmit="registrarConsultor(event)">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" required>
+
+    <label for="domicilio">Domicilio:</label>
+    <input type="text" id="domicilio" required>
+
+    <label for="marca">Marca de interés:</label>
+    <select id="marca" required>
+      <option value="">Selecciona una marca</option>
+      <option value="Natura">Natura</option>
+      <option value="Avon">Avon</option>
+      <option value="Sheló">Sheló</option>
+    </select>
+
+    <label for="ine-frontal">INE (frente):</label>
+    <input type="file" id="ine-frontal" accept="image/*" required>
+
+    <label for="ine-trasero">INE (reverso):</label>
+    <input type="file" id="ine-trasero" accept="image/*" required>
+
+    <button type="submit">Registrarme</button>
+  </form>
+</section>
+<footer>
+    <p>&copy; 2025 Nanci Glam Nature. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61562969484681"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/527711253543"><img src="img/whatsapp1.png" alt="WhatsApp"></a>
+    </div>
+    <div class="pagos">
+     <a href="pago.html"><img src="img/bbva.png" alt="BBVA"></a>
+     <a href="pago.html"><img src="img/mercadopago.png" alt="Mercado pago"></a>
+     <a href="pago.html"><img src="img/paypal1.png" alt="Paypal"></a>
+    </div>
+  </footer>
+</body>
+</html>
