@@ -231,39 +231,41 @@
   </footer> 
 
 <script>
-  function mostrarFormularioCompra(idFormulario, nombreProducto) {
-    // Oculta todos los formularios primero
-    const formularios = document.querySelectorAll('.formulario-compra');
-    formularios.forEach(f => f.classList.add('oculto'));
+function mostrarFormularioCompra(idFormulario, producto) {
+  // Oculta otros formularios si hay
+  const formularios = document.querySelectorAll('section[id^="form"]');
+  formularios.forEach(f => f.classList.add('oculto'));
 
-    // Muestra el formulario correspondiente
-    const formulario = document.getElementById(idFormulario);
+  // Muestra el formulario correspondiente
+  const formulario = document.getElementById(idFormulario);
+  if (formulario) {
     formulario.classList.remove('oculto');
-
-    // Rellena el campo de producto
-    formulario.querySelector('input[name="producto"]').value = nombreProducto;
+    formulario.querySelector('#producto').value = producto;
   }
+}
 
-  function enviarPedidoWhatsApp(idFormulario) {
-    const formulario = document.getElementById(idFormulario);
-    const producto = formulario.querySelector('input[name="producto"]').value;
-    const nombre = formulario.querySelector('input[placeholder="Nombre completo"]').value;
-    const domicilio = formulario.querySelector('input[placeholder="Domicilio"]').value;
-    const telefono = formulario.querySelector('input[placeholder="Teléfono"]').value;
-    const pago = formulario.querySelector('select').value;
+function enviarPedidoWhatsApp(formularioId) {
+  const form = document.getElementById(formularioId).querySelector('form');
+  const producto = form.querySelector('[name="producto"]').value;
+  const nombre = form.querySelector('[name="nombre"]').value;
+  const domicilio = form.querySelector('[name="domicilio"]').value;
+  const telefono = form.querySelector('[name="telefono"]').value;
+  const pago = form.querySelector('[name="pago"]').value;
 
-    if (!nombre || !domicilio || !telefono || !pago) {
-      alert('Por favor completa todos los campos');
-      return;
-    }
+  const mensaje = `Hola, quiero hacer un pedido:\n
+🔹 Producto: ${producto}
+👤 Nombre: ${nombre}
+🏠 Domicilio: ${domicilio}
+📞 Teléfono: ${telefono}
+💳 Forma de pago: ${pago}`;
 
-    const numero = "5211234567890"; // <-- Cambia este número por el tuyo con lada internacional
-    const mensaje = `Hola, quiero realizar un pedido:\n\n🛍 Producto: ${producto}\n👤 Nombre: ${nombre}\n🏠 Domicilio: ${domicilio}\n📞 Teléfono: ${telefono}\n💳 Forma de pago: ${pago}`;
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  const numeroWhatsApp = "527711253543";
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, '_blank');
-  }
+  window.open(url, '_blank');
+}
 </script>
+
 
 </body>
 </html>
