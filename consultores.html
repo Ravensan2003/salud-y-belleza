@@ -71,16 +71,29 @@
       <option value="Avon">Avon</option>
       <option value="Sheló">Sheló</option>
     </select>
-
-    <label for="ine-frontal">INE (frente):</label>
-    <input type="file" id="ine-frontal" accept="image/*" required>
-
-    <label for="ine-trasero">INE (reverso):</label>
-    <input type="file" id="ine-trasero" accept="image/*" required>
-
-    <button type="submit">Registrarme</button>
+    <button type="button" onclick="enviarConsultorWhatsApp()">Enviar por WhatsApp</button>
   </form>
 </section>
+
+<script>
+  function enviarConsultorWhatsApp() {
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const domicilio = document.getElementById("domicilio").value;
+
+    const mensaje = `¡Hola! Quiero registrarme como consultor. Aquí están mis datos:
+👤 Nombre: ${nombre}
+📧 Correo: ${correo}
+📱 Teléfono: ${telefono}
+🏠 Domicilio: ${domicilio}`;
+
+    const numeroWhatsApp = "527711253543"; // Reemplaza con tu número con clave LADA
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+  }
+</script>
 <footer>
     <p>&copy; 2025 Nanci Glam Nature. Todos los derechos reservados.</p>
     <div class="redes">
