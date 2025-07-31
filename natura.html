@@ -455,6 +455,60 @@
   </form>
 </section>
 </div>
+
+<!-- Producto 9 -->
+    <div class="producto">
+      <img src="perfume humor liberta.PNG" alt="Perfume Humor body">
+      <h3>Perfume Humor Body splash acerola e hibisco</h3>
+      <p>$288.80 MXN</p>
+       <button onclick="mostrarFormularioCompra('form9', 'Perfume Tododia body splash')">
+  Comprar
+</button>
+
+  <section id="form9" class="oculto" style="margin-top: 15px;">
+  <h2>Formulario de Compra</h2>
+  <form>
+      
+    <div style="margin-bottom: 10px;">
+      <label>Producto:</label><br>
+      <input type="text" id="producto" name="producto" readonly>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Nombre completo:</label><br>
+      <input type="text" name="nombre" required>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Cantidad:</label><br>
+      <input type="number" name="cantidad" required min="1">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Domicilio:</label><br>
+      <input type="text" name="domicilio" required>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Teléfono:</label><br>
+      <input type="tel" name="telefono" required>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label>Forma de pago:</label><br>
+      <select name="pago" required>
+        <option value="Efectivo">Efectivo</option>
+        <option value="Transferencia">Transferencia</option>
+        <option value="Tarjeta">Tarjeta</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="enviarPedidoWhatsApp('form7')">Enviar por WhatsApp</button>
+  </form>
+</section>
+</div>
+
+      
 </section>
 
  <footer>
