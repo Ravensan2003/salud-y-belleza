@@ -1935,14 +1935,14 @@
     </div>
   </footer>
 
-    <script>
+<script>
 function mostrarFormularioCompra(idFormulario, producto, imagen) {
-  // Oculta otros formularios si hay
-   const formularios = document.querySelectorAll('section[id^="form"]');
+  // Oculta todos los formularios
+  const formularios = document.querySelectorAll('section[id^="form"]');
   formularios.forEach(f => f.classList.add('oculto'));
 
-  // Muestra el formulario correspondiente
- const formulario = document.getElementById(idFormulario);
+  // Muestra el formulario actual
+  const formulario = document.getElementById(idFormulario);
   if (formulario) {
     formulario.classList.remove('oculto');
     formulario.querySelector('[name="producto"]').value = producto;
@@ -1963,16 +1963,17 @@ function enviarPedidoWhatsApp(formularioId) {
   const mensaje = `Hola, quiero hacer un pedido:\n
 🔹 Producto: ${producto}
 👤 Nombre: ${nombre}
-   cantidad: ${cantidad}
+📦 Cantidad: ${cantidad}
 🏠 Domicilio: ${domicilio}
 📞 Teléfono: ${telefono}
-💳 Forma de pago: ${pago}`;
-🖼️ Imagen del producto: https://tusitio.com/ruta/${imagen}`;    
+💳 Forma de pago: ${pago}
+🖼️ Imagen del producto: https://tusitio.com/ruta/${imagen}`;
 
   const numeroWhatsApp = "527711253543"; 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 }
+
 // Ampliar imagen
 function ampliarImagen(imagen) {
   const visor = document.getElementById('visor-imagen');
@@ -1984,7 +1985,8 @@ function ampliarImagen(imagen) {
 // Cerrar visor de imagen
 function cerrarVisor() {
   document.getElementById('visor-imagen').style.display = 'none';
-}       
+}
 </script>
+
 </body>
 </html>
