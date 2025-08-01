@@ -233,6 +233,37 @@ footer .pagos img:hover {
   display: none;
 }
 
+/* Imagen ampliable tipo Natura */
+.img-ampliable {
+  cursor: zoom-in;
+  transition: transform 0.2s ease-in-out;
+}
+
+.img-ampliable:hover {
+  transform: scale(1.03);
+}
+
+/* Visor modal de imagen */
+#visor-imagen {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#visor-imagen img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
 
 
 
