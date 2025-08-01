@@ -1936,8 +1936,34 @@
   </footer>
 
 <script>
+// Función para mostrar y ocultar formularios de compra
+function mostrarFormularioCompra(idFormulario, producto) {
+  // Oculta todos los formularios
+  const formularios = document.querySelectorAll('section[id^="form"]');
+  formularios.forEach(f => f.classList.add('oculto'));
+
+  // Muestra el formulario correspondiente
+  const formulario = document.getElementById(idFormulario);
+  if (formulario) {
+    formulario.classList.remove('oculto');
+
+    // Asigna el nombre del producto
+    const inputProducto = formulario.querySelector('[name="producto"]');
+    if (inputProducto) {
+      inputProducto.value = producto;
+    }
+
+    // Guarda la imagen relacionada con ese producto
+    const contenedorProducto = formulario.closest('.producto');
+    const imagen = contenedorProducto?.querySelector('img')?.getAttribute('src') || '';
+    formulario.setAttribute('data-imagen', imagen);
+  }
+}
+
+// Función para enviar el pedido por WhatsApp
 function enviarPedidoWhatsApp(formularioId) {
-  const form = document.getElementById(formularioId)?.querySelector('form');
+  const formContainer = document.getElementById(formularioId);
+  const form = formContainer?.querySelector('form');
   if (!form) {
     alert("No se encontró el formulario.");
     return;
@@ -1955,15 +1981,20 @@ function enviarPedidoWhatsApp(formularioId) {
     return;
   }
 
+  // Recuperar la imagen del contenedor
+  const imagenURL = formContainer.getAttribute('data-imagen') || '';
+  const urlAbsoluta = `${location.origin}/${imagenURL}`; // Convierte la ruta en URL completa
+
   const mensaje = `🛒 *Pedido nuevo desde la página web*%0A
 📦 *Producto:* ${producto}%0A
+🖼️ *Imagen del producto:* ${urlAbsoluta}%0A
 🔢 *Cantidad:* ${cantidad}%0A
 👤 *Nombre:* ${nombre}%0A
 🏠 *Domicilio:* ${domicilio}%0A
 📱 *Teléfono:* ${telefono}%0A
 💳 *Forma de pago:* ${pago}`;
 
-  const numeroWhatsApp = "527711253543"; // Reemplaza con tu número si cambia
+  const numeroWhatsApp = "527711253543";
   const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 
   window.open(url, '_blank');
