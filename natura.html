@@ -45,10 +45,12 @@
 
 <!-- Producto 1 -->
     <div class="producto">
-      <img src="desorotante.PNG" alt="Desodorante">
+      <img src="desorotante.PNG" alt="Desodorante" class="img-ampliable" 
+    onclick="ampliarImagen(this)"
+    data-src="erva doce desodorante.PNG">
       <h3>desodorante antitranspirante</h3>
       <p>De $135 MXN a $108 MXN</p>
-       <button onclick="mostrarFormularioCompra('form1', 'Desodorante Antitranspirante')">
+       <button onclick="mostrarFormularioCompra('form1', 'Desodorante Antitranspirante', 'desorotante.PNG' )">
   Comprar
 </button>
 
@@ -1911,6 +1913,11 @@
   </form>
 </section>
 </div>     
+
+<!-- Modal para visor de imagen -->
+<div id="visor-imagen" onclick="cerrarVisor()">
+  <img id="imagen-ampliada" src="" alt="Imagen ampliada">
+</div>
       
 </section>
 
@@ -1929,16 +1936,17 @@
   </footer>
 
     <script>
-function mostrarFormularioCompra(idFormulario, producto) {
+function mostrarFormularioCompra(idFormulario, producto, imagen) {
   // Oculta otros formularios si hay
-  const formularios = document.querySelectorAll('section[id^="form"]');
+   const formularios = document.querySelectorAll('section[id^="form"]');
   formularios.forEach(f => f.classList.add('oculto'));
 
   // Muestra el formulario correspondiente
-  const formulario = document.getElementById(idFormulario);
+ const formulario = document.getElementById(idFormulario);
   if (formulario) {
     formulario.classList.remove('oculto');
-    formulario.querySelector('#producto').value = producto;
+    formulario.querySelector('[name="producto"]').value = producto;
+    formulario.querySelector('[name="imagen"]').value = imagen;
   }
 }
 
@@ -1950,6 +1958,7 @@ function enviarPedidoWhatsApp(formularioId) {
   const domicilio = form.querySelector('[name="domicilio"]').value;
   const telefono = form.querySelector('[name="telefono"]').value;
   const pago = form.querySelector('[name="pago"]').value;
+  const imagen = form.querySelector('[name="imagen"]').value;
 
   const mensaje = `Hola, quiero hacer un pedido:\n
 🔹 Producto: ${producto}
@@ -1958,12 +1967,24 @@ function enviarPedidoWhatsApp(formularioId) {
 🏠 Domicilio: ${domicilio}
 📞 Teléfono: ${telefono}
 💳 Forma de pago: ${pago}`;
+🖼️ Imagen del producto: https://tusitio.com/ruta/${imagen}`;    
 
-  const numeroWhatsApp = "527711253543"; // <- Sustituye con tu número, por ejemplo: 5215612345678
+  const numeroWhatsApp = "527711253543"; 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-
   window.open(url, '_blank');
 }
+// Ampliar imagen
+function ampliarImagen(imagen) {
+  const visor = document.getElementById('visor-imagen');
+  const img = document.getElementById('imagen-ampliada');
+  img.src = imagen.dataset.src;
+  visor.style.display = 'flex';
+}
+
+// Cerrar visor de imagen
+function cerrarVisor() {
+  document.getElementById('visor-imagen').style.display = 'none';
+}       
 </script>
 </body>
 </html>
