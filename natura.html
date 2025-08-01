@@ -47,7 +47,7 @@
     <div class="producto">
       <img src="desorotante.PNG" alt="Desodorante" class="img-ampliable" 
     onclick="ampliarImagen(this)"
-    data-src="erva doce desodorante.PNG">
+    data-src="desorotante.PNG">
       <h3>desodorante antitranspirante</h3>
       <p>De $135 MXN a $108 MXN</p>
        <button onclick="mostrarFormularioCompra('form1', 'Desodorante Antitranspirante', 'desorotante.PNG' )">
@@ -1936,43 +1936,40 @@
   </footer>
 
 <script>
-function mostrarFormularioCompra(idFormulario, producto, imagen) {
-  // Oculta todos los formularios
-  const formularios = document.querySelectorAll('section[id^="form"]');
-  formularios.forEach(f => f.classList.add('oculto'));
-
-  // Muestra el formulario actual
-  const formulario = document.getElementById(idFormulario);
-  if (formulario) {
-    formulario.classList.remove('oculto');
-    formulario.querySelector('[name="producto"]').value = producto;
-    formulario.querySelector('[name="imagen"]').value = imagen;
-  }
-}
-
 function enviarPedidoWhatsApp(formularioId) {
-  const form = document.getElementById(formularioId).querySelector('form');
-  const producto = form.querySelector('[name="producto"]').value;
-  const nombre = form.querySelector('[name="nombre"]').value;
-  const cantidad = form.querySelector('[name="cantidad"]').value;
-  const domicilio = form.querySelector('[name="domicilio"]').value;
-  const telefono = form.querySelector('[name="telefono"]').value;
-  const pago = form.querySelector('[name="pago"]').value;
-  const imagen = form.querySelector('[name="imagen"]').value;
+  const form = document.getElementById(formularioId)?.querySelector('form');
+  if (!form) {
+    alert("No se encontró el formulario.");
+    return;
+  }
 
-  const mensaje = `Hola, quiero hacer un pedido:\n
-🔹 Producto: ${producto}
-👤 Nombre: ${nombre}
-📦 Cantidad: ${cantidad}
-🏠 Domicilio: ${domicilio}
-📞 Teléfono: ${telefono}
-💳 Forma de pago: ${pago}
-🖼️ Imagen del producto: https://tusitio.com/ruta/${imagen}`;
+  const producto = form.querySelector('[name="producto"]')?.value || "Producto no especificado";
+  const nombre = form.querySelector('[name="nombre"]')?.value || "";
+  const cantidad = form.querySelector('[name="cantidad"]')?.value || "";
+  const domicilio = form.querySelector('[name="domicilio"]')?.value || "";
+  const telefono = form.querySelector('[name="telefono"]')?.value || "";
+  const pago = form.querySelector('[name="pago"]')?.value || "";
 
-  const numeroWhatsApp = "527711253543"; 
-  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+  if (!nombre || !cantidad || !domicilio || !telefono || !pago) {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
+
+  const mensaje = `🛒 *Pedido nuevo desde la página web*%0A
+📦 *Producto:* ${producto}%0A
+🔢 *Cantidad:* ${cantidad}%0A
+👤 *Nombre:* ${nombre}%0A
+🏠 *Domicilio:* ${domicilio}%0A
+📱 *Teléfono:* ${telefono}%0A
+💳 *Forma de pago:* ${pago}`;
+
+  const numeroWhatsApp = "527711253543"; // Reemplaza con tu número si cambia
+  const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
   window.open(url, '_blank');
 }
+</script>
+
 
 // Ampliar imagen
 function ampliarImagen(imagen) {
