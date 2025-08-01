@@ -1983,7 +1983,7 @@ function enviarPedidoWhatsApp(formularioId) {
 
   // Recuperar la imagen del contenedor
   const imagenURL = formContainer.getAttribute('data-imagen') || '';
-  const urlAbsoluta = `${location.origin}/${imagenURL}`; // Convierte la ruta en URL completa
+  const urlAbsoluta = new URL(imagenURL, location.href).href; // Convierte la ruta en URL completa
 
   const mensaje = `🛒 *Pedido nuevo desde la página web*%0A
 📦 *Producto:* ${producto}%0A
